@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Wallet
     balance={20}
+    deposit={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -31,6 +32,12 @@ ShallowWrapper {
           className="input-wallet"
           onChange={[Function]}
 />,
+        <button
+          className="btn-deposit"
+          onClick={[Function]}
+>
+          Deposit
+</button>,
       ],
     },
     "ref": null,
@@ -74,6 +81,19 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Deposit",
+          "className": "btn-deposit",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Deposit",
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -95,6 +115,12 @@ ShallowWrapper {
             className="input-wallet"
             onChange={[Function]}
 />,
+          <button
+            className="btn-deposit"
+            onClick={[Function]}
+>
+            Deposit
+</button>,
         ],
       },
       "ref": null,
@@ -137,6 +163,19 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Deposit",
+            "className": "btn-deposit",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Deposit",
+          "type": "button",
         },
       ],
       "type": "div",
