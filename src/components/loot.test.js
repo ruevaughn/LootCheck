@@ -3,7 +3,6 @@ import { mount, shallow } from 'enzyme';
 import { Loot } from './Loot';
 
 describe('Loot', () => {
-  const mockFetchbitcoin = jest.fn();
   let props = { balance: 10, bitcoin: {} };
   let loot = shallow(<Loot {...props} />);
 
@@ -12,6 +11,7 @@ describe('Loot', () => {
   });
 
   describe('when mounted', () => {
+    const mockFetchbitcoin = jest.fn();
     beforeEach(() => {
       props.fetchBitcoin = mockFetchbitcoin;
       loot = mount(<Loot {...props} />);
@@ -33,7 +33,5 @@ describe('Loot', () => {
       expect(loot.find('h3').text()).toEqual('Bitcoin balance: 0.01');
     });
   });
-
-
 });
 
