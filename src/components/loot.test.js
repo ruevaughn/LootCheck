@@ -1,12 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { Loot } from './Loot';
 
 describe('Loot', () => {
-  const loot = shallow(<Loot />);
+  const mockFetchbitcoin = jest.fn();
+  const props = { balance: 10, bitcoin: {} };
+  let loot = shallow(<Loot {...props} />);
 
   it('renders properly', () => {
     expect(loot).toMatchSnapshot();
+  });
+
+  describe('when mounted', () => {
+    beforeEach(() => {
+      props.fetchBitcoin = mockFetchbitcoin;
+      loot = mount(<Loot {...props} />);
+    });
+
+    it('dispatches the `fetchBitcoing()` method it receives from props', () => {
+      expect(mockFetchbitcoin).toHaveBeenCalled();
+    });
   });
 });
 

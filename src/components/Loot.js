@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchBitcoin } from '../actions/bitcoin';
 
 export class Loot extends Component {
+
+  componentDidMount() {
+    this.props.fetchBitcoin();
+  }
+
   render() {
     return (
       <h3>Bitcoin Balance:</h3>
@@ -8,4 +15,4 @@ export class Loot extends Component {
   }
 }
 
-export default Loot;
+export default connect(state => state, { fetchBitcoin })(Loot);
