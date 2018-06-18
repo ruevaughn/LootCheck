@@ -7,7 +7,7 @@ describe('Wallet', () => {
   const wallet = shallow(<Wallet {...props} />);
 
   it('renders properly', () => {
-    expect(wallet).toMatchSnapShot;
+    expect(wallet).toMatchSnapshot();
   });
 
   it('displays the blance from props', () => {
