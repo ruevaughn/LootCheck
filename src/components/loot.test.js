@@ -33,5 +33,7 @@ describe('Loot', () => {
       expect(loot.find('h3').text()).toEqual('Bitcoin balance: 0.01');
     });
   });
+
+
 });
 
