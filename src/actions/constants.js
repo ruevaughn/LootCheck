@@ -1,1 +1,1 @@
-export const SET_BALANCe = 'SET_BALANCE';
+export const SET_BALANCE = 'SET_BALANCE';

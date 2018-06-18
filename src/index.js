@@ -7,8 +7,8 @@ import App from './components/App';
 
 const store = createStore(rootReducer);
 render(
-  <Provider store=(store)>
+  <Provider store={store}>
     <App />
-  </Provider>
-  document.getElementById('root'));
+  </Provider>,
+  document.getElementById('root')
 )
